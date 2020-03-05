@@ -24,14 +24,16 @@ class TabController: UITabBarController, UITabBarControllerDelegate {
         
         let homeVC = HomeVC()
         homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
-        let navController = UINavigationController(rootViewController: homeVC)
+        let navController1 = UINavigationController(rootViewController: homeVC)
         
 
-    
+        let newBoxVC = NewBoxVC()
+        newBoxVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+        let navController2 = UINavigationController(rootViewController: newBoxVC)
         
         
-        viewControllers = [navController]
-
+        viewControllers = [navController1, navController2]
+        
     }
     
     
@@ -39,7 +41,6 @@ class TabController: UITabBarController, UITabBarControllerDelegate {
     
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("Selected a new view controller")
     }
     
     
