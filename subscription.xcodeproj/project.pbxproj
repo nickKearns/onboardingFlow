@@ -13,6 +13,11 @@
 		01C1CF2323E0BD17006821F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C1CF2223E0BD17006821F9 /* ViewController.swift */; };
 		01C1CF2823E0BD19006821F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C1CF2723E0BD19006821F9 /* Assets.xcassets */; };
 		01C1CF2B23E0BD19006821F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C1CF2923E0BD19006821F9 /* LaunchScreen.storyboard */; };
+		01EF5F2D2410C9200078096A /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF5F2C2410C9200078096A /* LoginVC.swift */; };
+		01EF5F2F2410DFE00078096A /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF5F2E2410DFE00078096A /* TabController.swift */; };
+		01EF5F382410E2600078096A /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF5F362410E2600078096A /* HomeVC.swift */; };
+		01EF5F392410E2600078096A /* HomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EF5F372410E2600078096A /* HomeVC.xib */; };
+		01EF5F3B2410E3240078096A /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF5F3A2410E3240078096A /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		01C1CF2723E0BD19006821F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01C1CF2A23E0BD19006821F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01C1CF2C23E0BD19006821F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01EF5F2C2410C9200078096A /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		01EF5F2E2410DFE00078096A /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		01EF5F362410E2600078096A /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		01EF5F372410E2600078096A /* HomeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVC.xib; sourceTree = "<group>"; };
+		01EF5F3A2410E3240078096A /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				0181F53123E76E4300D4CF3B /* OnboardView.swift */,
+				01EF5F2C2410C9200078096A /* LoginVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -56,6 +67,10 @@
 			isa = PBXGroup;
 			children = (
 				01C1CF2223E0BD17006821F9 /* ViewController.swift */,
+				01EF5F2E2410DFE00078096A /* TabController.swift */,
+				01EF5F362410E2600078096A /* HomeVC.swift */,
+				01EF5F372410E2600078096A /* HomeVC.xib */,
+				01EF5F3A2410E3240078096A /* UIViewControllerExtensions.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -150,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01C1CF2B23E0BD19006821F9 /* LaunchScreen.storyboard in Resources */,
+				01EF5F392410E2600078096A /* HomeVC.xib in Resources */,
 				01C1CF2823E0BD19006821F9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,10 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01EF5F3B2410E3240078096A /* UIViewControllerExtensions.swift in Sources */,
 				0181F53223E76E4300D4CF3B /* OnboardView.swift in Sources */,
+				01EF5F382410E2600078096A /* HomeVC.swift in Sources */,
+				01EF5F2F2410DFE00078096A /* TabController.swift in Sources */,
 				01C1CF2323E0BD17006821F9 /* ViewController.swift in Sources */,
 				01C1CF1F23E0BD17006821F9 /* AppDelegate.swift in Sources */,
 				01C1CF2123E0BD17006821F9 /* SceneDelegate.swift in Sources */,
+				01EF5F2D2410C9200078096A /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
