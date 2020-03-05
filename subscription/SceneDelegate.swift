@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             
             let navigation = UINavigationController(rootViewController: timeline)
+            navigation.navigationBar.isHidden = true
             window.rootViewController = navigation
             
             self.window = window

@@ -51,6 +51,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             scrollView.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor),
             scrollView.centerYAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerYAnchor)
         ])
+        scrollView.delegate = self
     }
     
     func setupPageController() {
@@ -63,9 +64,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
-    func setupViews() {
-        
-    }
+   
     
     
     
@@ -89,7 +88,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
        
         
-        firstView = OnboardView(color: .blue, message: "Welcome to hike box!", imageName: "first_image", isLastPage: false)
+        firstView = OnboardView(color: .darkGray, message: "Welcome to Golf Box!", imageName: "tigerWoods", isLastPage: false)
         stackView.addArrangedSubview(firstView)
         
         NSLayoutConstraint.activate([
@@ -97,23 +96,33 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             
         ])
         
-        secondView = OnboardView(color: .green, message: "The best hiking subsription box", imageName: "second_image", isLastPage: false)
+        secondView = OnboardView(color: .gray, message: "The number one golf subscription box", imageName: "titleist_iron", isLastPage: false)
         stackView.addArrangedSubview(secondView)
         
         NSLayoutConstraint.activate([
             secondView.widthAnchor.constraint(equalToConstant: view.frame.size.width),
         ])
         
-        thirdView = OnboardView(color: .purple, message: "sign up now!", imageName: "third_image", isLastPage: true)
+        thirdView = OnboardView(color: .lightGray, message: "sign up now!", imageName: "golf_PNG32", isLastPage: true)
+        thirdView.continueButton.addTarget(self, action: #selector(continueButtonTapped), for: .touchUpInside)
         stackView.addArrangedSubview(thirdView)
+    
         
         NSLayoutConstraint.activate([
             thirdView.widthAnchor.constraint(equalToConstant: view.frame.size.width)
         ])
         
+    
+        
         
     }
     
+    @objc func continueButtonTapped() {
+        let loginVC = LoginVC()
+        let navigationController = UINavigationController(rootViewController: loginVC)
+        self.view.window!.rootViewController = navigationController
+    }
+
     
     
     
@@ -122,21 +131,21 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         setupScrollView()
         setupPageController()
-        setupViews()
         
-        
-        //        scrollView.backgroundColor = .gray
-        //        scrollView.delegate = self
-        
+
         
         // Do any additional setup after loading the view.
     }
+    
+    
     
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         pageController.currentPage = Int(pageNumber)
     }
+    
+    
     
 }
 
