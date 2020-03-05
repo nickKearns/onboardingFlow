@@ -8,13 +8,14 @@
 
 import UIKit
 
-class TabController: UITableViewController, UITabBarControllerDelegate {
+class TabController: UITabBarController, UITabBarControllerDelegate {
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.delegate = self
+        setupViewControllers()
+        self.delegate = self
         
     }
     
@@ -22,12 +23,15 @@ class TabController: UITableViewController, UITabBarControllerDelegate {
     func setupViewControllers() {
         
         let homeVC = HomeVC()
-        let newBoxesVC = NewBoxesVC()
-        let pastBoxesVC = PastBoxesVC()
+        homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        let navController = UINavigationController(rootViewController: homeVC)
+        
+
     
         
         
-        
+        viewControllers = [navController]
+
     }
     
     
