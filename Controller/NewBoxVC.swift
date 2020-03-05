@@ -77,7 +77,7 @@ class NewBoxVC: UIViewController {
 }
 
 
-extension NewBoxVC: UICollectionViewDataSource {
+extension NewBoxVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         sections.count
     }
@@ -85,26 +85,27 @@ extension NewBoxVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         sections[section].numberOfItems
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    //        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HabitImageCollectionViewCell.identifier, for: indexPath) as! HabitImageCollectionViewCell
-    //
-    //        cell.setImage(image: habitImages[indexPath.row].image)
-    //
-    //        return cell
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewBoxCell.identifier, for: indexPath) as! NewBoxCell
-            if indexPath == selectedIndexPath{
-                cell.setImage(image: UIImage(named: "taylor_made_iron")!, withSelection: false)
-            } else {
-                cell.setImage(image: UIImage(named: "taylor_made_iron")!, withSelection: true)
-            }
-            return cell
+  
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewBoxCell.identifier, for: indexPath) as! NewBoxCell
+        if indexPath == selectedIndexPath{
+            cell.setImage(image: UIImage(named: "taylor_made_iron")!, withSelection: false)
+        } else {
+            cell.setImage(image: UIImage(named: "taylor_made_iron")!, withSelection: true)
         }
+        return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if selectedIndexPath == indexPath {
+            selectedIndexPath = nil
+        } else {
+            selectedIndexPath = indexPath
+        }
+        return false
+    }
 }
 
-extension NewBoxVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-    
-    
-    
-    
-}
+

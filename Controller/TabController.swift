@@ -32,7 +32,13 @@ class TabController: UITabBarController, UITabBarControllerDelegate {
         let navController2 = UINavigationController(rootViewController: newBoxVC)
         
         
-        viewControllers = [navController1, navController2]
+        
+        let pastBoxesVC = PastBoxesVC()
+        pastBoxesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 0)
+        let navController3 = UINavigationController(rootViewController: pastBoxesVC)
+        
+        
+        viewControllers = [navController1, navController2, navController3]
         
     }
     
