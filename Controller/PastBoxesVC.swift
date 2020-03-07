@@ -21,6 +21,8 @@ class PastBoxesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }()
     
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         populateData()
@@ -86,6 +88,7 @@ class PastBoxesVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         let selectedBox = boxes[indexPath.row]
         let boxDetailVC = BoxDetailVC()
+        print(selectedBox.date)
         boxDetailVC.box = selectedBox
         navigationController?.pushViewController(boxDetailVC, animated: true)
         

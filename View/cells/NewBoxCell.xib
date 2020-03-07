@@ -23,11 +23,12 @@
             </view>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="ZGY-5H-Yv2" secondAttribute="bottom" id="BW3-JP-wpo"/>
+                <constraint firstAttribute="trailing" secondItem="ZGY-5H-Yv2" secondAttribute="trailing" id="UOJ-n6-BrC"/>
                 <constraint firstItem="ZGY-5H-Yv2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="iXl-cn-jYt"/>
-                <constraint firstAttribute="trailing" secondItem="ZGY-5H-Yv2" secondAttribute="trailing" id="rHp-IA-6xA"/>
                 <constraint firstItem="ZGY-5H-Yv2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wYl-Iw-PRE"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="100" height="100"/>
             <connections>
                 <outlet property="imageView" destination="ZGY-5H-Yv2" id="gh6-Kc-tOf"/>
             </connections>

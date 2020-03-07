@@ -32,7 +32,7 @@ class BoxDetailVC: UIViewController {
     
     func setupTable() {
         self.view.addSubview(itemTable)
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .white
         itemTable.register(ItemTableCell.self, forCellReuseIdentifier: "ItemTableCell")
         itemTable.delegate = self
         itemTable.dataSource = self
@@ -65,7 +65,7 @@ extension BoxDetailVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableCell.identifier, for: indexPath) as! ItemTableCell
         print(items[indexPath.row].name)
-        cell.configure(item: items[indexPath.row])
+        cell.configure(items[indexPath.row])
         return cell
     }
     

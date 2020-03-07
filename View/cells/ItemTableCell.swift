@@ -29,7 +29,7 @@ class ItemTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(item: Item) {
+    func configure(_ item: Item) {
         itemLabel.text = item.name
         itemImage.image = item.image
     }
