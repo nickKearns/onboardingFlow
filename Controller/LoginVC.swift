@@ -11,6 +11,10 @@ import UIKit
 
 class LoginVC: UIViewController {
     
+    
+    var titleConstraintStart: NSLayoutConstraint!
+    var titleConstraintEnd: NSLayoutConstraint!
+    
     let titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -58,7 +62,28 @@ class LoginVC: UIViewController {
         
     }()
     
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        titleConstraintStart.isActive = false
+        titleConstraintEnd.isActive = true
+        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.0, options: [.curveEaseOut], animations: {
+            self.view.layoutIfNeeded()
+            self.titleLabel.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            
+            
+        }, completion: { _ in
+            UIView.animate(withDuration: 1.5, delay: 0.0, animations:
+                {
+                    UIView.animate(withDuration: 1.5, animations: {
+                        self.continueButton.alpha = 1.0
+                    }, completion: nil)
+            })
+            
+            
+        }
+            
+        )
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,12 +102,16 @@ class LoginVC: UIViewController {
     
     func setTitleLabel() {
         self.view.addSubview(titleLabel)
-        NSLayoutConstraint.activate([
-            titleLabel.centerYAnchor.constraint(equalTo: imageView.topAnchor, constant: -60),
-            titleLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor),
-            titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor)
-            
-        ])
+        
+        titleConstraintEnd = titleLabel.centerYAnchor.constraint(equalTo: imageView.topAnchor, constant: -60)
+        titleConstraintStart = titleLabel.centerYAnchor.constraint(equalTo: imageView.centerYAnchor, constant: 5)
+        titleConstraintStart.isActive = true
+        titleLabel.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+        
+        titleLabel.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        
+        
     }
     
     
@@ -128,7 +157,7 @@ class LoginVC: UIViewController {
             continueButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             continueButton.topAnchor.constraint(equalTo: passwordField.bottomAnchor, constant: 25),
             continueButton.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.75)
-        
+            
         ])
         
         

@@ -23,6 +23,7 @@ class BoxDetailVC: UIViewController {
     }()
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupData()
@@ -50,7 +51,7 @@ class BoxDetailVC: UIViewController {
     }
     
     func setupData() {
-        for item in box.items {
+        for item in box!.items {
             items.append(item)
         }
     }
@@ -65,7 +66,7 @@ extension BoxDetailVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableCell.identifier, for: indexPath) as! ItemTableCell
         print(items[indexPath.row].name)
-        cell.configure(items[indexPath.row])
+        cell.configure(item: items[indexPath.row])
         return cell
     }
     

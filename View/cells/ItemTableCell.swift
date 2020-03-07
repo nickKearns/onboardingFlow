@@ -29,9 +29,9 @@ class ItemTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(_ item: Item) {
-        itemLabel.text = item.name
-        itemImage.image = item.image
+    func configure(item: Item) {
+        itemLabel?.text = item.name
+        itemImage?.image = item.image
     }
     
 }

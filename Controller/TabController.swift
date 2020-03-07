@@ -40,6 +40,7 @@ class TabController: UITabBarController, UITabBarControllerDelegate {
         
         let profileVC = ContentView()
         let hostVC = UIHostingController(rootView: profileVC)
+        hostVC.title = "Profile"
         hostVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile"), tag: 0)
         
         
