@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class TabController: UITabBarController, UITabBarControllerDelegate {
     
@@ -37,8 +38,12 @@ class TabController: UITabBarController, UITabBarControllerDelegate {
         pastBoxesVC.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 0)
         let navController3 = UINavigationController(rootViewController: pastBoxesVC)
         
+        let profileVC = ContentView()
+        let hostVC = UIHostingController(rootView: profileVC)
+        hostVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
         
-        viewControllers = [navController1, navController2, navController3]
+        
+        viewControllers = [navController1, navController2, navController3, hostVC]
         
     }
     

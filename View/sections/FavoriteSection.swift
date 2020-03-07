@@ -8,7 +8,12 @@
 import UIKit
 
 struct FavoriteSection: Section {
-    let numberOfItems = 10
+    let numberOfItems = 6
+    
+    let images: [UIImage] = [UIImage(named: "driver")!, UIImage(named: "putter")!, UIImage(named: "golf_bag")!,
+                             UIImage(named: "hat")!, UIImage(named: "prov1")!, UIImage(named: "glove")!
+    ]
+    
     
     
     func layoutSection() -> NSCollectionLayoutSection? {
@@ -28,8 +33,7 @@ struct FavoriteSection: Section {
     
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteCell.identifier, for: indexPath) as! FavoriteCell
-        cell.imageView.image = UIImage(named: "taylor_made_iron")
-        cell.itemLabel.text = "Taylormade p750"
+        cell.imageView.image = images[indexPath.row]
         return cell
     }
     

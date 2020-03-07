@@ -35,7 +35,12 @@
 		01EF5F6A24112D920078096A /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF5F6924112D920078096A /* ItemModel.swift */; };
 		01EF5F6D241185CE0078096A /* BoxTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF5F6B241185CE0078096A /* BoxTableCell.swift */; };
 		01EF5F6E241185CE0078096A /* BoxTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EF5F6C241185CE0078096A /* BoxTableCell.xib */; };
-		01EF5F72241193B50078096A /* BoxDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF5F71241193B50078096A /* BoxDetailVC.swift */; };
+		01EF5F7B241212B30078096A /* ItemTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF5F79241212B30078096A /* ItemTableCell.swift */; };
+		01EF5F7C241212B30078096A /* ItemTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01EF5F7A241212B30078096A /* ItemTableCell.xib */; };
+		01EF5F8224131D160078096A /* BoxDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF5F8124131D160078096A /* BoxDetailVC.swift */; };
+		01EF5F85241326100078096A /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF5F83241326100078096A /* CircleImage.swift */; };
+		01EF5F86241326100078096A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF5F84241326100078096A /* ContentView.swift */; };
+		01EF5F8B2413274C0078096A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EF5F8A2413274C0078096A /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,7 +74,12 @@
 		01EF5F6924112D920078096A /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		01EF5F6B241185CE0078096A /* BoxTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxTableCell.swift; sourceTree = "<group>"; };
 		01EF5F6C241185CE0078096A /* BoxTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoxTableCell.xib; sourceTree = "<group>"; };
-		01EF5F71241193B50078096A /* BoxDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDetailVC.swift; sourceTree = "<group>"; };
+		01EF5F79241212B30078096A /* ItemTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableCell.swift; sourceTree = "<group>"; };
+		01EF5F7A241212B30078096A /* ItemTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableCell.xib; sourceTree = "<group>"; };
+		01EF5F8124131D160078096A /* BoxDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxDetailVC.swift; sourceTree = "<group>"; };
+		01EF5F83241326100078096A /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		01EF5F84241326100078096A /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		01EF5F8A2413274C0078096A /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +104,7 @@
 		0104B37123E9ED3C00D133D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				01EF5F89241326700078096A /* profile */,
 				01EF5F412410F2260078096A /* Section.swift */,
 				01EF5F452410F3670078096A /* cells */,
 				01EF5F3C2410E7B20078096A /* sections */,
@@ -112,7 +123,7 @@
 				01EF5F3D2410ECDE0078096A /* HomeVC.swift */,
 				01EF5F59241116980078096A /* NewBoxVC.swift */,
 				01EF5F63241123320078096A /* PastBoxesVC.swift */,
-				01EF5F71241193B50078096A /* BoxDetailVC.swift */,
+				01EF5F8124131D160078096A /* BoxDetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,8 +183,20 @@
 				01EF5F5E2411170D0078096A /* NewBoxCell.xib */,
 				01EF5F6B241185CE0078096A /* BoxTableCell.swift */,
 				01EF5F6C241185CE0078096A /* BoxTableCell.xib */,
+				01EF5F79241212B30078096A /* ItemTableCell.swift */,
+				01EF5F7A241212B30078096A /* ItemTableCell.xib */,
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		01EF5F89241326700078096A /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				01EF5F83241326100078096A /* CircleImage.swift */,
+				01EF5F8A2413274C0078096A /* MapView.swift */,
+				01EF5F84241326100078096A /* ContentView.swift */,
+			);
+			path = profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01C1CF2B23E0BD19006821F9 /* LaunchScreen.storyboard in Resources */,
+				01EF5F7C241212B30078096A /* ItemTableCell.xib in Resources */,
 				01EF5F4D2410F78B0078096A /* FeaturedCell.xib in Resources */,
 				01EF5F6E241185CE0078096A /* BoxTableCell.xib in Resources */,
 				01C1CF2823E0BD19006821F9 /* Assets.xcassets in Resources */,
@@ -252,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01EF5F482410F3970078096A /* TitleCell.swift in Sources */,
+				01EF5F86241326100078096A /* ContentView.swift in Sources */,
 				01EF5F3B2410E3240078096A /* UIViewControllerExtensions.swift in Sources */,
 				01EF5F3E2410ECDE0078096A /* HomeVC.swift in Sources */,
 				0181F53223E76E4300D4CF3B /* OnboardView.swift in Sources */,
@@ -260,7 +285,6 @@
 				01EF5F402410EF910078096A /* FeaturedSection.swift in Sources */,
 				01EF5F6D241185CE0078096A /* BoxTableCell.swift in Sources */,
 				01EF5F5C241116F40078096A /* NewBoxSection.swift in Sources */,
-				01EF5F72241193B50078096A /* BoxDetailVC.swift in Sources */,
 				01EF5F422410F2260078096A /* Section.swift in Sources */,
 				01EF5F5424110B110078096A /* FavoriteSection.swift in Sources */,
 				01EF5F442410F29D0078096A /* TitleSection.swift in Sources */,
@@ -268,11 +292,15 @@
 				01EF5F64241123320078096A /* PastBoxesVC.swift in Sources */,
 				01C1CF2323E0BD17006821F9 /* ViewController.swift in Sources */,
 				01C1CF1F23E0BD17006821F9 /* AppDelegate.swift in Sources */,
+				01EF5F8B2413274C0078096A /* MapView.swift in Sources */,
 				01C1CF2123E0BD17006821F9 /* SceneDelegate.swift in Sources */,
+				01EF5F85241326100078096A /* CircleImage.swift in Sources */,
 				01EF5F5724110FA50078096A /* FavoriteCell.swift in Sources */,
 				01EF5F2D2410C9200078096A /* LoginVC.swift in Sources */,
+				01EF5F8224131D160078096A /* BoxDetailVC.swift in Sources */,
 				01EF5F5F2411170D0078096A /* NewBoxCell.swift in Sources */,
 				01EF5F4C2410F78B0078096A /* FeaturedCell.swift in Sources */,
+				01EF5F7B241212B30078096A /* ItemTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

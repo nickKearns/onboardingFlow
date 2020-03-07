@@ -8,7 +8,20 @@
 import UIKit
 
 struct NewBoxSection: Section {
-    let numberOfItems = 6
+    
+    
+    let numberOfItems = 8
+    
+    var listOfItems: [Item] = [
+        Item(name: "TaylorMade TP5 golf ball", image: UIImage(named: "tp5")!),
+        Item(name: "Titleist ProV1 golf ball", image: UIImage(named: "prov1")!),
+        Item(name: "TaylorMade M2 Driver", image: UIImage(named: "driver")!),
+        Item(name: "Odyssey Putter", image: UIImage(named: "putter")!),
+        Item(name: "Tiger Woods Hat", image: UIImage(named: "hat")!),
+        Item(name: "Ping Glove", image: UIImage(named: "glove")!),
+        Item(name: "Titleist p750 Irons", image: UIImage(named: "titleist_iron")!),
+        Item(name: "Callaway Golf Bag", image: UIImage(named: "golf_bag")!),
+    ]
     
     
     func layoutSection() -> NSCollectionLayoutSection? {
@@ -29,7 +42,8 @@ struct NewBoxSection: Section {
     
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewBoxCell.identifier, for: indexPath) as! NewBoxCell
-        cell.imageView.image = UIImage(named: "taylor_made_iron")
+        cell.setImage(image: listOfItems[indexPath.row].image, withSelection: true)
+//        cell.imageView.image = UIImage(named: "taylor_made_iron")
         return cell
     }
     
